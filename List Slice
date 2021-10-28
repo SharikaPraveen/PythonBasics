@@ -1,0 +1,4 @@
+# create a list and print the list from index no 2 to 6 -used 
+
+colors = ["white","green","blue","orange","yellow","violet","black","pink"]
+print(colors[2:7])
