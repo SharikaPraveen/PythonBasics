@@ -1,0 +1,5 @@
+# create a new list from the existing list - list comprehensive used
+
+colors = ["white","green","blue","orange","yellow","violet"]
+new = ["orange" for i in colors]
+print(new)
