@@ -1,0 +1,9 @@
+
+list = ["white","green","blue","orange","yellow","violet"]
+new= "color:{0},{1},{2},{3},{4},{5}".format(list[5],list[5],list[5],list[5],list[5],list[5])
+print(new)
+print(list[1:4])
+
+O/P
+color:violet,violet,violet,violet,violet,violet
+['green', 'blue', 'orange']
