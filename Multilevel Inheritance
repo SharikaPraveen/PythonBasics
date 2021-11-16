@@ -1,0 +1,48 @@
+#multilevel inheritance
+class Hospital:
+    def __init__(self,docname,adname,sisname,docdept,addept,sisdept):
+        self.docname = docname
+        self.adname = adname
+        self.sisname = sisname
+        self.docdept =docdept
+        self.addept = addept
+        self.sisdept = sisdept
+    def getdetails(self):
+        self.docname = input("Please enter the Doctor name")
+        self.adname = input("Please enter the Admin name")
+        self.sisname = input("Please enter Sister Name")
+        self.docdept = input("Enter Department of Doctor")
+        self.addept = input("Enter  Department of Admin")
+        self.sisdept = input("Enter Department of Sister ")
+class Department(Hospital):
+    def display(self):
+        print("Doctor Name:",self.docname)
+        print("Department of Doctor:", self.docdept)
+        print("Admin Name:",self.adname)
+        print("Department of Admin:",self.addept)
+        print("Sister Name:",self.sisname)
+        print("Department of Sister:",self.sisdept)
+class Patientward(Department):
+    def __init__(self, pname,page,pno,padd,pdis):
+        self.pname =pname
+        self.page = page
+        self.pno = pno
+        self.padd = padd
+        self.pdis = pdis
+    def getpatientdetails(self):
+        self.pname = input("Please enter the Patient name")
+        self.page = input("Please enter the Patient age")
+        self.pno = input("Please enter the Patient phone number")
+        self.padd = input("Please enter the Patient address")
+        self.pdis = input("Please enter the Disease details")
+    def displaypatientdetails(self):
+        print("Patient Name:", self.pname)
+        print("Patient Age:", self.page)
+        print("Patient Phone Number:", self.pno)
+        print("Patient Address:", self.padd)
+        print("Disease Info:", self.pdis)
+obj = Patientward('','','','','')
+obj.getdetails()
+obj.getpatientdetails()
+obj.display()
+obj.displaypatientdetails()
