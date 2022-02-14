@@ -1,0 +1,39 @@
+Using the concept of object oriented programming and inheritance, create a super class named Computer, which has two sub classes named Desktop and Laptop.
+Define two methods in the Computer class named getspecs and displayspecs, to get the specifications and display the specifications of the computer.You can use any specifications which you want. 
+The Desktop class and the Laptop class should have one specification which is exclusive to them for example laptop can have weight as a special specification. 
+Make sure that the sub classes have their own methods to get and display their special specification. 
+Create an object of laptop/ desktop and make sure to call all the methods from the computer class as well as the methods from the own class
+//
+class computer:
+    def __init__(self,name,price,ram):
+        self.name=name
+        self.price=price
+        self.ram=ram
+    def getspecs(self):
+        self.name=input("Please provide model name: ")
+        self.price=input("Please provide  price: ")
+        self.ram=input("Please provide  RAM details: ")
+    def displayspecs(self):
+        print('Here are the specs of the computer')
+        print('Model Name: ',self.name)
+        print('Price: ',self.price)
+        print('RAM: ',self.ram)
+class desktop(computer):
+    def __init__(self,gift):
+        self.gift=gift
+    def get_desktop(self):
+        self.gift=input("Please provide desktop freebies detail: ")
+    def print_desktop(self):
+        print('Friebies with Desktop: ',self.gift)
+class laptop(computer):
+    def __init__(self,weight):
+        self.weight=weight
+    def get_laptop(self):
+        self.weight=input("Please provide laptop weight: ")
+    def print_laptop(self):
+        print('Laptop Weight: ',self.weight)
+obj1= laptop('')
+obj1.getspecs()
+obj1.get_laptop()
+obj1.displayspecs()
+obj1.print_laptop()
